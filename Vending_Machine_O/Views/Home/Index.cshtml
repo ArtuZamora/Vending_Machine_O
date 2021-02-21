@@ -2,142 +2,128 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="wrapper">
+<div class="wrapper" id="main">
     <div class="options">
         <ul>
-            <li class="li-option active">
+            <li class="li-option active" onclick="ShowProducts()" id="products_option">
                 <i class="fas fa-pizza-slice"></i>
                 Productos
             </li>
-            <li class="li-option">
+            <li class="li-option" onclick="ShowProcess()" id="process_option">
                 <i class="fas fa-clipboard-list"></i>
                 Procesando
             </li>
-            <li class="li-option">
+            <li class="li-option" onclick="ShowFinished()" id="finished_option">
                 <i class="fas fa-check-double"></i>
                 Productos terminados
             </li>
         </ul>
     </div>
-    <div class="links">
-        <ul>
-            <li data-view="list-view" class="li-list active">
-                <i class="fas fa-th-list"></i>
-                Lista
-            </li>
-            <li data-view="grid-view" class="li-grid">
-                <i class="fas fa-th-large"></i>
-                Grilla
-            </li>
-        </ul>
-    </div>
     <div class="view_main">
-        <div class="view_wrap list-view" style="display: block;">
+        <div class="view_wrap grid-view">
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/tomato.png" alt="tomato">
+                    <img src="~/Content/Images/crepas.png" alt="crepas">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Tomato</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Crepas</p>
+                    <p class="content">Crepa dulce de Nutella, banano y fresa.</p>
+                    <div id="1" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/chilli.png" alt="chilli">
+                    <img src="~/Content/Images/hamburguesa.png" alt="hamburguesa">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Chilli</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Hamburguesa</p>
+                    <p class="content">Hamburguesa con carne de brisket, aguacate, lechuga y tomates.</p>
+                    <div id="2" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/carrot.png" alt="carrot">
+                    <img src="~/Content/Images/hotdog.png" alt="hotdog">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Carrot</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Hot Dog</p>
+                    <p class="content">Clásico Hot-Dog con salsa picante.</p>
+                    <div id="3" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/onion.png" alt="onion">
+                    <img src="~/Content/Images/papas_fritas.png" alt="papas_fritas">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Onion</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Papas Fritas</p>
+                    <p class="content">Clásicas papitas fritas, crujientes.</p>
+                    <div id="4" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/potato.png" alt="potato">
+                    <img src="~/Content/Images/pizza.png" alt="pizza">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Potato</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
-                </div>
-            </div>
-        </div>
-        <div class="view_wrap grid-view" style="display: none;">
-            <div class="view_item">
-                <div class="vi_left">
-                    <img src="~/Content/Images/apple.png" alt="apple">
-                </div>
-                <div class="vi_right">
-                    <p class="title">Apple</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Pizza</p>
+                    <p class="content">Pizza Rica de 8 porciones de jamon, tocino y queso.</p>
+                    <div id="5" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/banana.png" alt="banana">
+                    <img src="~/Content/Images/soda.png" alt="soda">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Banana</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Soda</p>
+                    <p class="content">Coca cola en lata refrescante.</p>
+                    <div id="6" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/grapes.png" alt="grapes">
+                    <img src="~/Content/Images/sorbete.png" alt="sorbete">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Grapes</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Sorbete</p>
+                    <p class="content">Sorbete de carretón de chocolate. Delicioso en cono canela.</p>
+                    <div id="7" class="btn">Comprar</div>
                 </div>
             </div>
             <div class="view_item">
                 <div class="vi_left">
-                    <img src="~/Content/Images/pineapple.png" alt="pineapple">
+                    <img src="~/Content/Images/tacos.png" alt="tacos">
                 </div>
                 <div class="vi_right">
-                    <p class="title">Pineapple</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
+                    <p class="title">Tacos</p>
+                    <p class="content">Tacos hechos de lomo de cerdo, cebolla curtida, frijoles y rib-eye</p>
+                    <div id="8" class="btn">Comprar</div>
                 </div>
             </div>
-            <div class="view_item">
-                <div class="vi_left">
-                    <img src="~/Content/Images/strawberry.png" alt="strawberry">
-                </div>
-                <div class="vi_right">
-                    <p class="title">Strawberry</p>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam impedit, veniam! Voluptate a impedit animi!</p>
-                    <div class="btn">View More</div>
-                </div>
-            </div>
-
         </div>
     </div>
 </div>
 
-<script src="~/Scripts/gridconv.js"></script>
+<div class="view_main" style="display: none;">
+        No products yet
+</div>
+
+<div class="view_main" style="display: none;">
+        No products yet
+</div>
+
+<div id="shim" style="display: none;"></div>
+<div id="msgbx" style="display: none;">
+    <p class="msg_overlay">¿Estás seguro de querer comprar este elemento?</p>
+    <button id="btn_succ" type="button" class="btn btn-success" onclick="Accept()">Sí</button>
+    <button type="button" class="btn btn-info" onclick="Decline()">No</button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="~/Scripts/vending.js"></script>
+<script>
+    $("#btn_succ").on('click', function () {
+        toastr.success('Item comprado con éxito!', 'Vending Machine')
+    })
+</script>
