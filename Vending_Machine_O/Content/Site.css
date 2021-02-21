@@ -197,3 +197,16 @@ textarea {
     width: 100px;
     height: 40px;
 }
+
+.fo_pr_fn {
+    font-family: Roboto;
+    justify-content: center;
+    font-size: x-large;
+    margin: 40px;
+}
+
+#foodImg {
+    margin-left: 10px;
+    width: 300px;
+    height: 250px;
+}
