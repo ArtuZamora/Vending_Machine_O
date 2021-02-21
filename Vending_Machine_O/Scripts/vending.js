@@ -1,5 +1,6 @@
 ﻿const times = ['10000', '5000', '7000', '5000', '15000', '2000', '10000', '15000'];
 const images = ['crepas.png', 'hamburguesa.png', 'hotdog.png', 'papas_fritas.png', 'pizza.png', 'soda.png', 'sorbete.png', 'tacos.png']
+const foodNames = ['Crepa', 'Hamburguesa', 'Hotdog', 'Papas Fritas', 'Pizza', 'Soda', 'Sorbete', 'Tacos']
 var btnProd = document.getElementById("products_option");
 var btnPcss = document.getElementById("process_option");
 var btnFnsh = document.getElementById("finished_option");
@@ -41,7 +42,6 @@ function ShowProcess() {
     else {
         image.src = "Content/Images/" + images[proccess[0] - 1];
     }
-    console.log(proccess);
 }
 function ShowFinished() {
     btnFnsh.classList.add("active");
@@ -50,6 +50,11 @@ function ShowFinished() {
     divProd[0].style.display = "none";
     divProd[1].style.display = "none";
     divProd[2].style.display = "block";
+    if (finished.length !== 0) {
+        document.getElementById("pc_f_1").style.display = "none";
+        document.getElementById("pc_f_2").style.display = "block";
+        document.getElementById("prod_htry").style.display = "block";
+    }
 }
 
 function BuyProduct(id) {
@@ -79,10 +84,29 @@ function HideMessage() {
 
 function ProcessFood() {
     finished.push(proccess[0]);
+    AddNodeToList(foodNames[proccess[0] - 1]);
     proccess.shift();
     toastr.info('El item ha sido entregado!')
     image.src = "Content/Images/" + images[proccess[0] - 1];
     if (proccess.length !== 0) {
         setTimeout(ProcessFood, times[proccess[0] - 1]);
     }
+}
+
+function AddNodeToList(item) {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+
+    var list = document.getElementById("prod_htry");
+    var entry = document.createElement('li');
+    entry.className = "list-group-item";
+    var entry2 = document.createElement('span');
+    entry2.className = "badge";
+    entry2.appendChild(document.createTextNode(today));
+    entry.appendChild(document.createTextNode(item));
+    entry.appendChild(entry2);
+    list.appendChild(entry);
 }
